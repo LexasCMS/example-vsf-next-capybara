@@ -1,22 +1,22 @@
-# theme
+# Vue Storefront Next Example
 
-> My breathtaking Nuxt.js project
+This repo contains an example of an e-commerce store that has been built using [LexasCMS](https://www.lexascms.com/vue-storefront/) and [Vue Storefront Next](https://www.vuestorefront.io/) with the [Capybara theme](https://github.com/vuestorefront/vsf-capybara).
 
-## Build Setup
+<p align="center">
+  <img src="preview@2x.jpg" alt="Vue Storefront Next E-commerce Store Example Preview" style="max-width:90%;" />
+</p>
 
-``` bash
-# install dependencies
-$ yarn install
+## Live Demo
 
-# serve with hot reload at localhost:3000
-$ yarn dev
+[Click here](https://lexascms-example-vsf-next-capybara.herokuapp.com/) to view a live demo of this repo.
 
-# build for production and launch server
-$ yarn build
-$ yarn start
+## Deploy to Heroku
 
-# generate static project
-$ yarn generate
-```
+If you would like to have a play around with this demo, you can deploy it to your own Heroku account by following the instructions below:
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+1. If you don't already have one, [create a LexasCMS account](https://app.lexascms.com/signup)
+2. Create a space using the **E-commerce Starter (Vue Storefront)** template
+3. From within your space, navigate to **Settings > General** and copy your space's ID
+4. Click the below button and follow the instructions
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/LexasCMS/example-vsf-next-capybara)
