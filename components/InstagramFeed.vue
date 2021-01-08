@@ -1,5 +1,5 @@
 <template>
-  <SfSection title-heading="Share Your Look" subtitle-heading="#YOURLOOK" class="section">
+  <SfSection :title-heading="title" :subtitle-heading="subtitle" class="section">
     <div class="grid grid-images">
       <div class="grid__row">
         <div class="grid__col">
@@ -30,6 +30,16 @@ export default {
   components: {
     SfSection,
     SfImage
+  },
+  props: {
+    title: {
+      type: String,
+      default: 'Share Your Look'
+    },
+    subtitle: {
+      tyep: String,
+      default: '#YOURLOOK'
+    }
   }
 };
 </script>

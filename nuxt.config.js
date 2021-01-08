@@ -46,11 +46,13 @@ export default {
       useRawSource: {
         dev: [
           '@vue-storefront/commercetools',
-          '@vue-storefront/core'
+          '@vue-storefront/core',
+          'vsf-lexascms'
         ],
         prod: [
           '@vue-storefront/commercetools',
-          '@vue-storefront/core'
+          '@vue-storefront/core',
+          'vsf-lexascms'
         ]
       }
     }],
@@ -78,13 +80,23 @@ export default {
       i18n: {
         useNuxtI18nConfig: true
       }
-    }]
+    }],
+    [
+      'vsf-lexascms/nuxt',
+      {
+        spaceId: 'e121e44b-2ddd-439f-b525-456ce2ac1187'
+      }
+    ]
   ],
   modules: [
     'nuxt-i18n',
     'cookie-universal-nuxt',
-    'vue-scrollto/nuxt'
+    'vue-scrollto/nuxt',
+    '@nuxtjs/markdownit'
   ],
+  markdownit: {
+    injected: true
+  },
   i18n: {
     currency: 'USD',
     country: 'US',

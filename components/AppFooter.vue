@@ -1,54 +1,38 @@
 <template>
   <SfFooter :column="4" multiple id="footer">
-    <SfFooterColumn :title="$t('About us')">
+    <SfFooterColumn title="Orders">
       <SfList>
-        <SfListItem
-          v-for="item in aboutUs"
-          :key="item"
-          >
-          <SfMenuItem
-            :data-cy="`app-foter-url_about-us_${item.split(' ').join('-').toLowerCase()}`"
-            :label="$t(item)"
-          />
+        <SfListItem v-for="item in orders" :key="item.link">
+          <NuxtLink :to="item.link">
+            <SfMenuItem :label="item.text" />
+          </NuxtLink>
         </SfListItem>
       </SfList>
     </SfFooterColumn>
-    <SfFooterColumn :title="$t('Departments')">
+    <SfFooterColumn title="Help">
       <SfList>
-        <SfListItem
-          v-for="item in departments"
-          :key="item"
-        >
-          <SfMenuItem
-            :data-cy="`app-foter-url_departments_${item.split(' ').join('-').toLowerCase()}`"
-            :label="$t(item)"
-          />
+        <SfListItem v-for="item in help" :key="item.link">
+          <NuxtLink :to="item.link">
+            <SfMenuItem :label="item.text" />
+          </NuxtLink>
         </SfListItem>
       </SfList>
     </SfFooterColumn>
-    <SfFooterColumn :title="$t('Help')">
+    <SfFooterColumn title="About Us">
       <SfList>
-        <SfListItem
-          v-for="item in help"
-          :key="item"
-        >
-          <SfMenuItem
-            :data-cy="`app-foter-url_help_${item.split(' ').join('-').toLowerCase()}`"
-            :label="$t(item)"
-          />
+        <SfListItem v-for="item in aboutUs" :key="item.link">
+          <NuxtLink :to="item.link">
+            <SfMenuItem :label="item.text" />
+          </NuxtLink>
         </SfListItem>
       </SfList>
     </SfFooterColumn>
-    <SfFooterColumn :title="$t('Payment & Delivery')">
+    <SfFooterColumn title="Others">
       <SfList>
-        <SfListItem
-          v-for="item in paymentsDelivery"
-          :key="item"
-        >
-          <SfMenuItem
-            :data-cy="`app-foter-url_payment_${item.split(' ').join('-').toLowerCase()}`"
-            :label="$t(item)"
-          />
+        <SfListItem v-for="item in others" :key="item.link">
+          <NuxtLink :to="item.link">
+            <SfMenuItem :label="item.text" />
+          </NuxtLink>
         </SfListItem>
       </SfList>
     </SfFooterColumn>
@@ -72,10 +56,24 @@ export default {
   },
   data() {
     return {
-      aboutUs: ['Who we are', 'Quality in the details', 'Customer Reviews'],
-      departments: ['Women fashion', 'Men fashion', 'Kidswear', 'Home'],
-      help: ['Customer service', 'Size guide', 'Contact us'],
-      paymentsDelivery: ['Purchase terms', 'Guarantee'],
+      orders: [
+        { text: 'Delivery', link: '/static/delivery' },
+        { text: 'Return Policy', link: '/static/returns' }
+      ],
+      help: [
+        { text: 'Customer service', link: '/static/customer-service' },
+        { text: 'Size guide', link: '/static/size-guide' },
+        { text: 'Contact us', link: '/static/contact' }
+      ],
+      aboutUs: [
+        { text: 'About us', link: '/static/about-us' },
+        { text: 'Customer service', link: '/static/customer-service' },
+        { text: 'Store locator', link: '/static/store-locator' }
+      ],
+      others: [
+        { text: 'Legal notice', link: '/static/legal' },
+        { text: 'Privacy policy', link: '/static/privacy' }
+      ],
       social: ['facebook', 'pinterest', 'twitter', 'youtube'],
       isMobile: false,
       desktopMin: 1024
