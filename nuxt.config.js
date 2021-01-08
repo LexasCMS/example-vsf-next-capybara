@@ -84,7 +84,7 @@ export default {
     [
       'vsf-lexascms/nuxt',
       {
-        spaceId: 'e121e44b-2ddd-439f-b525-456ce2ac1187'
+        spaceId: process.env.LEXASCMS_SPACE_ID
       }
     ]
   ],
