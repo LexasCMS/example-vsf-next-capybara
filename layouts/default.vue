@@ -1,5 +1,6 @@
 <template>
   <div>
+    <LexascmsBanner />
     <TopBar class="desktop-only" />
     <div id="layout" >
       <AppHeader />
@@ -21,6 +22,7 @@ import TopBar from '~/components/TopBar.vue';
 import CartSidebar from '~/components/CartSidebar.vue';
 import WishlistSidebar from '~/components/WishlistSidebar.vue';
 import LoginModal from '~/components/LoginModal.vue';
+import LexascmsBanner from '~/components/LexascmsBanner.vue';
 // const CartSidebar = () => import(/* webpackChunkName: "CartSidebar" */ '~/components/CartSidebar.vue')
 // const LoginModal = () => import(/* webpackChunkName: "LoginModal" */ '~/components/LoginModal.vue')
 
@@ -32,7 +34,8 @@ export default {
     AppFooter,
     CartSidebar,
     WishlistSidebar,
-    LoginModal
+    LoginModal,
+    LexascmsBanner
   }
 };
 </script>
