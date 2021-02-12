@@ -23,7 +23,6 @@
 <script>
 import {
   SfCarousel,
-  SfCarouselItem,
   SfProductCard,
   SfSection
 } from '@storefront-ui/vue';
@@ -31,7 +30,6 @@ import {
 export default {
   components: {
     SfCarousel,
-    SfCarouselItem,
     SfProductCard,
     SfSection
   },

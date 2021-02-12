@@ -1,7 +1,7 @@
 <template>
   <div id="text-page">
     <SfHeading :level="1" :title="page.title" />
-    <div class="text-page__content" v-html="$md.render(page.message)"></div>
+    <div class="text-page__content" v-if="page.message" v-html="$md.render(page.message)"></div>
   </div>
 </template>
 
